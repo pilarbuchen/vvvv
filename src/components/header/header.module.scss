@@ -1,0 +1,118 @@
+@import '@styles/variables.scss';
+
+:root {
+    --headerTopBarHeight: 50px;
+    --headerNavigationHeight: 54px;
+    --headerHeight: calc(var(--headerTopBarHeight) + var(--headerNavigationHeight));
+}
+
+.root {
+    padding: 0 var(--pagePaddingHoriz);
+    height: var(--headerHeight);
+}
+
+.topBar {
+    height: var(--headerTopBarHeight);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-bottom: 1px solid var(--black);
+    font: var(--paragraph3);
+}
+
+.logo {
+    font: var(--heading3);
+    font-size: 26px;
+}
+
+.advertisingText {
+    display: inline-block;
+    margin-right: 16px;
+    white-space: nowrap;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--headerNavigationHeight);
+    gap: 1rem;
+}
+
+.navigation .empty {
+    width: 160px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.menu {
+    font: var(--paragraph3);
+}
+
+.navigation .actions {
+    flex-shrink: 0;
+    width: 160px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.cart {
+    margin-left: 8px;
+    transform: translateY(-2px);
+}
+
+.shopNow {
+    text-align: center;
+    line-height: 1;
+    color: var(--black);
+    padding: 3px 11px 4px;
+    border-radius: 50px;
+    border: 1px solid var(--black);
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: var(--primary2);
+        color: var(--black);
+    }
+}
+
+.openMenuButton {
+    display: none;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: $desktop-width) {
+    .menu {
+        display: none;
+    }
+
+    .empty {
+        display: none;
+    }
+
+    .navigation {
+        justify-content: end;
+    }
+
+    .openMenuButton {
+        display: flex;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    :root {
+        --headerTopBarHeight: 80px;
+    }
+
+    .topBar {
+        flex-direction: column-reverse;
+        align-items: start;
+        justify-content: center;
+        font-size: 13px;
+    }
+}

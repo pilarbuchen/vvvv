@@ -1,0 +1,15 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(27, 17, 13, 0.8);
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    background-color: var(--primary1);
+}

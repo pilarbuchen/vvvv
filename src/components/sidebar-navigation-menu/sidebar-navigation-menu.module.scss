@@ -1,0 +1,29 @@
+@import '@styles/variables.scss';
+
+.drawer {
+    max-width: 500px;
+}
+
+.menu {
+    padding: 100px 0;
+    font-size: 18px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: $tablet-width) {
+    .menu {
+        font: var(--paragraph1);
+    }
+
+    .drawer {
+        max-width: none;
+    }
+}

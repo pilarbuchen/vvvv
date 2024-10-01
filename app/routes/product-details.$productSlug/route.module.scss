@@ -1,0 +1,83 @@
+@import '@styles/variables.scss';
+
+.page {
+    padding-bottom: 3%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 32px;
+    margin-top: 36px;
+}
+
+.productName {
+    font: var(--heading3);
+    font-size: 34px;
+}
+
+.sku {
+    margin-top: 8px;
+    font: var(--paragraph3);
+    line-height: 1;
+    color: var(--primary4);
+}
+
+.price {
+    margin-top: 16px;
+    font: var(--heading5);
+    font-size: 21px;
+}
+
+.description {
+    margin-top: 14px;
+    font: var(--paragraph2);
+    line-height: 1.5;
+}
+
+.quantity {
+    margin-top: 20px;
+}
+
+.quantityLabel {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.addToCartButton {
+    width: 260px;
+    margin-top: 28px;
+}
+
+.additionalInfoSections {
+    margin-top: 24px;
+}
+
+.socialLinks {
+    margin-top: 36px;
+}
+
+@media (max-width: $desktop-width) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .content {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .productName {
+        font: var(--heading6);
+    }
+
+    .addToCartButton {
+        width: 100%;
+    }
+}

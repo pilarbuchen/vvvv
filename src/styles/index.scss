@@ -1,0 +1,25 @@
+:root {
+    font: var(--paragraph1);
+    color: var(--primary5);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    --pagePaddingHoriz: max(2vw, 15px);
+}
+
+body {
+    margin: 0;
+    place-items: center;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--primary1);
+}
+
+:focus-visible {
+    box-shadow:
+        0 0 0 1px #ffffff,
+        0 0 0 3px #116dff;
+}

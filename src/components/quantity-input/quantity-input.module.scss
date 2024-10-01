@@ -1,0 +1,46 @@
+.root {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    border-bottom-color: rgba(23, 17, 13, 0.4);
+}
+
+.root:focus-within {
+    border-color: var(--primary5);
+}
+
+.button {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button:disabled {
+    color: var(--primary3);
+    cursor: default;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.input:disabled {
+    color: var(--primary3);
+}
+
+.input:focus-visible {
+    box-shadow: none;
+}

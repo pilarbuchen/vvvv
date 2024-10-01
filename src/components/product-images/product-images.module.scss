@@ -1,0 +1,59 @@
+.mainImageWrapper {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e6e6;
+}
+
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagePlaceholderIcon {
+    width: 210px;
+    height: 210px;
+    color: #646464;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.thumbnail {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.thumbnail::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail:focus-visible::after {
+    box-shadow:
+        inset 0 0 1px 2px #3899ec,
+        inset 0 0 7px 0 #fff,
+        0 0 10px -5px #3899ec;
+}
+
+.thumbnail.selected::after {
+    background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

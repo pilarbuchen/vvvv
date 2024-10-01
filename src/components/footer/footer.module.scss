@@ -1,0 +1,59 @@
+@import '@styles/variables.scss';
+
+.root {
+    padding: 30px var(--pagePaddingHoriz);
+    background-color: var(--primary3);
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10vw;
+    margin-bottom: 50px;
+}
+
+.navItem {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 16px;
+    line-height: 2.2;
+    white-space: nowrap;
+}
+
+.navItem.active {
+    color: var(--colorD4);
+}
+
+.bottomBar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font: var(--heading1);
+    line-height: 1;
+    font-size: min(13vw, 100px);
+}
+
+.copyright {
+    font: var(--paragraph3);
+    white-space: nowrap;
+}
+
+.coduxLink {
+    text-decoration: underline;
+}
+
+@media (max-width: $tablet-width) {
+    .navigation {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .navigation {
+        gap: 20px 100px;
+    }
+}

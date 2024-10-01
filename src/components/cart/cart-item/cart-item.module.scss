@@ -1,0 +1,97 @@
+.root {
+    position: relative;
+    padding: 20px 0;
+}
+
+.itemContent {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    column-gap: 20px;
+    align-items: start;
+}
+
+.root:not(:first-child) {
+    border-top: 1px solid rgba(23, 17, 13, 0.3);
+}
+
+.imageWrapper {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.imagePlaceholder {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black);
+}
+
+.imagePlaceholderIcon {
+    color: var(--white);
+    width: 37px;
+    height: 37px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.removeButton {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.quantityAndPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.root .quantityInput {
+    width: 96px;
+    height: 32px;
+    border-color: var(--primary5);
+}
+
+.root .quantityInput button {
+    width: 32px;
+}
+
+.root .quantityInputDisabled {
+    border-color: var(--primary3);
+}
+
+.root.loading {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.unavailableIndication {
+    margin-top: 30px;
+    height: 50px;
+    padding: 9px 16px 9px 12px;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    background-color: #fceaea;
+    font: var(--paragraph3);
+}
+
+.unavailableIcon {
+    color: #df3131;
+    width: 20px;
+    height: 20px;
+}

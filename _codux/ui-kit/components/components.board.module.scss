@@ -1,0 +1,13 @@
+.demoWidth {
+    width: 250px;
+}
+
+.linkCard {
+    aspect-ratio: 0.75;
+}
+
+@media (max-width: 480px) {
+    .demoWidth {
+        width: 100%;
+    }
+}

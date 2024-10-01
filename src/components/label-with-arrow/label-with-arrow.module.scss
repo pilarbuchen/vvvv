@@ -1,0 +1,31 @@
+.root {
+    --hover-letter-spacing: 0.15em;
+    display: grid;
+    width: min-content;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    gap: 20px;
+    font: var(--heading5);
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+        letter-spacing: var(--hover-letter-spacing);
+    }
+}
+
+.label {
+    white-space: nowrap;
+    grid-area: 1 / 1;
+}
+
+.label[aria-hidden] {
+    visibility: hidden;
+    letter-spacing: var(--hover-letter-spacing);
+}
+
+.icon {
+    width: 50px;
+}

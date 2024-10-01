@@ -1,0 +1,89 @@
+@import '@styles/variables.scss';
+
+.root {
+    width: 100%;
+    max-width: 800px;
+}
+
+.section {
+    padding: 40px;
+    border: 1px solid var(--primary2);
+}
+
+.divider {
+    height: 1px;
+    background: var(--primary2);
+    border: none;
+    margin: 20px 0;
+}
+
+.orderItems {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.note {
+    font: var(--paragraph3);
+    color: var(--secondary3);
+}
+
+.priceSummary {
+    grid-column: 2;
+}
+
+.priceDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font: var(--paragraph3);
+}
+
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalPrice {
+    font-size: 20px;
+}
+
+.addressSection {
+    margin-top: 32px;
+    display: flex;
+    gap: 64px;
+}
+
+.addressData {
+    font: var(--paragraph3);
+    margin-top: 16px;
+}
+
+.deliveryTime {
+    margin-top: 8px;
+}
+
+@media (max-width: $mobile-width) {
+    .section {
+        padding: 20px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .priceSummary {
+        grid-column: auto;
+    }
+
+    .addressSection {
+        flex-direction: column;
+        gap: 24px;
+    }
+}

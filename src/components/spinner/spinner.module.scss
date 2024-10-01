@@ -1,0 +1,29 @@
+.spinner {
+    animation: rotation 2s linear infinite;
+}
+
+.circle {
+    animation: circleAnimation 1.5s ease-in-out infinite;
+    stroke: var(--primary5);
+}
+
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circleAnimation {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

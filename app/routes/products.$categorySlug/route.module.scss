@@ -1,0 +1,76 @@
+@import '@styles/variables.scss';
+
+.page {
+    padding-bottom: 3%;
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+}
+
+.navigation {
+    flex: none;
+    width: 20%;
+    max-width: 200px;
+    min-width: 140px;
+}
+
+.navigationTitle {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(23, 17, 13, 0.2);
+    margin-bottom: 16px;
+    font: var(--heading5);
+}
+
+.categoryListItem {
+    margin-bottom: 12px;
+}
+
+.categoryLink {
+    font: var(--paragraph3);
+}
+
+.categoryLinkActive {
+    color: var(--secondary3);
+}
+
+.categoryName {
+    font: var(--heading3);
+}
+
+.categoryDescription {
+    max-width: 672px;
+    margin-top: 4px;
+    font: var(--paragraph1);
+}
+
+.productsCount {
+    margin-top: 46px;
+    margin-bottom: 8px;
+    font: var(--paragraph3);
+}
+
+.productsList {
+    --minCardSize: 404px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--minCardSize), 100%), 1fr));
+    gap: 20px 4px;
+}
+
+.productLink {
+    display: block;
+}
+
+@media (max-width: $desktop-width) {
+    .productsList {
+        --minCardSize: 250px;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .navigation {
+        display: none;
+    }
+}

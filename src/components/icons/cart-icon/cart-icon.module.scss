@@ -1,0 +1,24 @@
+.root {
+    width: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.handle {
+    width: 9px;
+    height: 7px;
+    border: 1px solid var(--black);
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+
+.bag {
+    border: 1px solid var(--black);
+    width: 21px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--action2);
+}
