@@ -137,5 +137,5 @@ export default createBoard({
         windowWidth: 430,
         windowHeight: 700,
     },
-    isSnippet: true,
+    isSnippet: false,
 });
